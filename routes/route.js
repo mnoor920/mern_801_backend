@@ -7,7 +7,7 @@ import { CreateBlogPost } from '../controller/blog-post-controller.js';
 const router = express.Router();
 
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send("App Config Succefully")
 })
 router.post('/create_user', SignUp)
