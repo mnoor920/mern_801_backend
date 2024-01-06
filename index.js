@@ -10,7 +10,7 @@ app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', Router)
-const port = 4000
+const port = process.env.PORT || 4000
 
 
 
