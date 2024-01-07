@@ -11,3 +11,15 @@ export const CreateBlogPost = async (request, response) => {
         response.status(500).json(error)
     }
 }
+
+
+export const getBlogPosts = async (request, response) => {
+    // let username = request.query.username;
+    let posts;
+    try {
+        posts = await BlogPost.find({})
+        response.status(200).json(posts)
+    } catch (error) {
+        response.status(500).json(error)
+    }
+}
