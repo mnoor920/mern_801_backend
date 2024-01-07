@@ -12,3 +12,15 @@ export const SignUp = async (request, response) => {
         response.status(500).json(error)
     }
 }
+
+
+export const getAllUser = async (request, response) => {
+    let allUser;
+    try {
+        allUser = await User.find({})
+        response.status(200).json(allUser)
+    } catch (error) {
+        response.status(500).json(error)
+    }
+}
+

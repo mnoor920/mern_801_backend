@@ -1,5 +1,5 @@
 import express from 'express'
-import { SignUp } from '../controller/user-controller.js';
+import { SignUp, getAllUser } from '../controller/user-controller.js';
 import { CreateBlogPost, getBlogPosts } from '../controller/blog-post-controller.js';
 
 
@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
 
 // user authentication routes
 router.post('/create_user', SignUp)
+router.get('/get_users', getAllUser)
 
 // blogs post routes
 router.post('/create_blog', CreateBlogPost)
