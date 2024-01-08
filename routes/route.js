@@ -8,7 +8,7 @@ import Upload from '../middelware/uploadImage.js';
 const router = express.Router();
 
 // normal
-router.get('/api', (req, res) => {
+router.get('/', (req, res) => {
     res.send("App Config Succefully")
 })
 

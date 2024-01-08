@@ -17,7 +17,7 @@ app.use(cors())
 app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, "./public")));
-app.use('/api', Router)
+app.use('/', Router)
 const port = process.env.PORT || 4000
 
 app.listen(port, () => {
