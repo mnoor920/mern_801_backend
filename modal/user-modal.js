@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
     {
+        role: {
+            type: String,
+            required: true,
+        },
         first_name: {
             type: String,
             required: true,
@@ -22,6 +26,12 @@ const userSchema = new mongoose.Schema(
         image: {
             type: String,
             required: true
+        },
+        facebook_link: {
+            type: String,
+        },
+        whatsapp_link: {
+            type: String,
         }
     }
 )
